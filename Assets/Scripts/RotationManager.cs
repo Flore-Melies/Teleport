@@ -23,6 +23,7 @@ public class RotationManager : MonoBehaviour
     {
         while (true)
         {
+            // On tourne sur l’axe Y du player (transform.up) de "speed * power" degré par frame
             transform.Rotate(transform.up, speed * power);
             yield return null;
         }
