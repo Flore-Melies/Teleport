@@ -61,5 +61,8 @@ public class Teleport : MonoBehaviour
         player.transform.rotation = endPoint.rotation;
         // On lance l’animation de disparition de l’écran de chargement
         loadingAnimator.SetTrigger("Disappear");
+        // On force la synchronisation des rigidbodies et character controllers avec leur transform
+        // COmme on téléporte le transform du player, on doit forcer la resynchronisation
+        Physics.SyncTransforms();
     }
 }
